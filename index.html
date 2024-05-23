@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagen Samal - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ADD8E6; /* Light blue background */
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2rem;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nagen Samal</h1>
+        <p>Proud Indian, Life trainer, Spiritual speaker, Motivation booster, Yoga instructor, Garden Adviser</p>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#topics">Topics</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#videos">Videos</a>
+        <a href="#pictures">Pictures</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Nagen Samal, Proud Indian, Life trainer. I am a spiritual speaker, motivation booster, Yoga instructor, and Garden Adviser.</p>
+        </section>
+        <section id="topics">
+            <h2>Topics</h2>
+            <h3>Gardening</h3>
+            <ul>
+                <li>Tips on Soil selection</li>
+                <li>Watering</li>
+                <li>Plant selection</li>
+                <li>Growing tips</li>
+                <li>Flowering tips</li>
+            </ul>
+            <h3>Moral Boosting</h3>
+            <p>Advice based on situation</p>
+            <h3>Financial Management</h3>
+            <p>Tips as per interest and fund</p>
+            <h3>Investment Advice</h3>
+            <p>Tips for Investment</p>
+        </section>
+        <section id="blogs">
+            <h2>Blogs</h2>
+            <p>Will add later.</p>
+        </section>
+        <section id="videos">
+            <h2>Videos</h2>
+            <p>Will add later.</p>
+        </section>
+        <section id="pictures">
+            <h2>Pictures</h2>
+            <div class="slider">
+                <div class="slides">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <div class="slides">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div class="slides">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+                <div class="slides">
+                    <img src="image4.jpg" alt="Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image5.jpg" alt="Image 5">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:Samal_nagen@rediffmail.com">Samal_nagen@rediffmail.com</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nagen Samal. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
