@@ -20,13 +20,14 @@
         }
         nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             background: #444;
             padding: 0.5rem;
         }
         nav a {
             color: #fff;
-            margin: 0 1rem;
+            margin: 0.5rem 1rem;
             text-decoration: none;
         }
         .container {
@@ -99,45 +100,45 @@
             width: 100%;
             bottom: 0;
         }
-        .container p {
-         width: 45%; /* Adjust the width as needed */
-         float: 50%; /* Float the paragraph to the left */
-         margin-right: 5%; /* Add some spacing between the paragraph and the next element */
+        .container p, .watermark-container, .video-container {
+            width: 100%;
+            margin: 1rem 0;
         }
-        .watermark-container {
-            float: right;
-            width: 45%;
-            margin-left: 5%;
-        }
-        .watermark-container img {
+        .watermark-container img, .video-container iframe {
             width: 100%;
             display: block;
             opacity: 0.3; /* Adjust the opacity as needed */
         }
-        .watermark-container-2 {
-            float: right;
-            width: 45%;
-            margin-left: 5%;
-        }
-        .watermark-container-2 img {
-            width: 100%;
-            display: block;
-            opacity: 0.3; /* Adjust the opacity as needed */
-        }
-        .video-container {
-            float: right; /* Float the container to the right */
-            width: 45%; /* Set the width of the container */
-            margin-left: 5%; /* Add some margin for spacing */
+
+        @media (min-width: 768px) {
+            .container p {
+                width: 45%;
+                float: left;
+                margin-right: 5%;
+            }
+            .watermark-container {
+                float: right;
+                width: 45%;
+                margin-left: 5%;
+            }
+            .video-container {
+                float: right;
+                width: 45%;
+                margin-left: 5%;
+            }
+            .video-container iframe {
+                height: 315px; /* Set a fixed height or adjust as needed */
+            }
         }
 
-        /* Style for the video iframe */
-        .video-container iframe {
-            width: 100%; /* Make the iframe fill the container */
-            height: 315px; /* Set a fixed height or adjust as needed */
+        @media (max-width: 767px) {
+            .container {
+                padding: 1rem;
+            }
+            nav a {
+                margin: 0.5rem 0.5rem;
+            }
         }
-
-
-
     </style>
 </head>
 <body>
@@ -155,57 +156,28 @@
     </nav>
     <div class="container">
         <section id="about">
-            
             <h2>About Me</h2>
-            <p>
-                Welcome! I am delighted to connect with you. My journey is a blend of diverse passions and expertise that span across gardening, motivation boosting, spiritual speaking, financial management, and investment advising. Allow me to share a bit more about each facet of what I offer.
-                
-            </p> 
+            <p>Welcome! I am delighted to connect with you. My journey is a blend of diverse passions and expertise that span across gardening, motivation boosting, spiritual speaking, financial management, and investment advising. Allow me to share a bit more about each facet of what I offer.</p> 
             <div class="watermark-container">
                 <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/nag1.jpg" alt="Watermark Image">
             </div>
             <p>Gardening Enthusiast
-                My love for gardening goes beyond the simple pleasure of growing plants. It's about creating vibrant, sustainable environments that bring joy and tranquility. I am well-versed in various gardening techniques, from organic farming to modern hydroponics, and I take immense pleasure in helping others cultivate their green spaces. Whether you're a beginner or a seasoned gardener, I can offer you tips, tricks, and personalized guidance to help your garden flourish.
-                
-            </p>
-            <!-- <div class="watermark-container-2">
-                <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/nagpic.jpg" alt="Watermark Image 2">
-            </div> -->
-
+                My love for gardening goes beyond the simple pleasure of growing plants. It's about creating vibrant, sustainable environments that bring joy and tranquility. I am well-versed in various gardening techniques, from organic farming to modern hydroponics, and I take immense pleasure in helping others cultivate their green spaces. Whether you're a beginner or a seasoned gardener, I can offer you tips, tricks, and personalized guidance to help your garden flourish.</p>
             <p>Motivation Booster
-                We all face challenges and sometimes need a little push to stay on track. With a natural knack for understanding people's needs and aspirations, I specialize in boosting motivation. Through personalized strategies and heartfelt encouragement, I help individuals find their inner strength and stay committed to their goals. My approach is compassionate, practical, and tailored to meet you where you are on your journey.
-                
-            </p> <p>Spiritual Speaker
-                In today's fast-paced world, finding spiritual balance is essential. As a spiritual speaker, I aim to inspire and uplift by sharing insights and wisdom that resonate with the soul. My talks are designed to connect deeply with my audience, offering perspectives that foster inner peace, personal growth, and a deeper understanding of oneself and the universe. Whether you're seeking guidance or simply a moment of reflection, my words are meant to touch and transform.
-                
-            </p>
-            
-
+                We all face challenges and sometimes need a little push to stay on track. With a natural knack for understanding people's needs and aspirations, I specialize in boosting motivation. Through personalized strategies and heartfelt encouragement, I help individuals find their inner strength and stay committed to their goals. My approach is compassionate, practical, and tailored to meet you where you are on your journey.</p>
+            <p>Spiritual Speaker
+                In today's fast-paced world, finding spiritual balance is essential. As a spiritual speaker, I aim to inspire and uplift by sharing insights and wisdom that resonate with the soul. My talks are designed to connect deeply with my audience, offering perspectives that foster inner peace, personal growth, and a deeper understanding of oneself and the universe. Whether you're seeking guidance or simply a moment of reflection, my words are meant to touch and transform.</p>
             <p>Financial Management and Investment Advisor
-                Navigating the complex world of finance can be daunting, but with the right guidance, it can also be incredibly rewarding. I bring a wealth of knowledge in financial management and investment advising, helping individuals and businesses make informed decisions that lead to financial stability and growth. From budgeting and saving to investing and wealth management, my goal is to empower you with the tools and knowledge to achieve your financial aspirations.
-                
-            </p> 
+                Navigating the complex world of finance can be daunting, but with the right guidance, it can also be incredibly rewarding. I bring a wealth of knowledge in financial management and investment advising, helping individuals and businesses make informed decisions that lead to financial stability and growth. From budgeting and saving to investing and wealth management, my goal is to empower you with the tools and knowledge to achieve your financial aspirations.</p> 
             <section id="videos">
                 <h2>Videos</h2>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/AETFvQonfV8" frameborder="0" allowfullscreen></iframe>
                 </div>
             </section>
-             <p>A Holistic Approach
+            <p>A Holistic Approach
                 What sets me apart is my holistic approach, integrating these diverse areas into a cohesive framework aimed at enhancing overall well-being. By balancing the practical aspects of financial health with the nurturing elements of gardening, the inspirational power of motivation, and the profound insights of spirituality, I offer a unique and comprehensive support system.
-                
-                Thank you for taking the time to learn more about me. Whether you're looking to grow a garden, find motivation, seek spiritual insights, or manage your finances, I'm here to help. Let's embark on this journey together towards a more fulfilling and balanced life.
-                
-                
-                
-                
-                
-                </p>
-
-               
-
-
-
+                Thank you for taking the time to learn more about me. Whether you're looking to grow a garden, find motivation, seek spiritual insights, or manage your finances, I'm here to help. Let's embark on this journey together towards a more fulfilling and balanced life.</p>
         </section>
         <section id="topics">
             <h2>Topics</h2>
