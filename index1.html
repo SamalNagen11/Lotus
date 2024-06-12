@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paduka Ashram - Personal Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Oriya', sans-serif;
+            /* font-family: Arial, sans-serif; */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ADD8E6; /* Light blue background */
+
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #444;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0.5rem 1rem;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2rem;
+            color: #00008B; /* Deep blue font color */
+        }
+        h1, h2 {
+            color: #00008B; /* Deep blue font color */
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .container p, .watermark-container, .video-container {
+            width: 100%;
+            margin: 1rem 0;
+        }
+        .watermark-container img, .video-container iframe {
+            width: 100%;
+            display: block;
+            opacity: 0.3; /* Adjust the opacity as needed */
+        }
+
+        @media (min-width: 768px) {
+            .container p {
+                width: 45%;
+                float: left;
+                margin-right: 5%;
+            }
+            .watermark-container {
+                float: right;
+                width: 45%;
+                margin-left: 5%;
+            }
+            .video-container {
+                float: right;
+                width: 45%;
+                margin-left: 5%;
+            }
+            .video-container iframe {
+                height: 315px; /* Set a fixed height or adjust as needed */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                padding: 1rem;
+            }
+            nav a {
+                margin: 0.5rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Paduka Ashram Dandi Sahi</h1>
+        <p>Proud Indian, Yogi, Life Trainer, Spiritual Speaker, Motivation booster</p>
+    </header>
+    <nav>
+        <a href="about.html">About Me</a>
+        <a href="#topics">Topics</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#videos">Videos</a>
+        <a href="#pictures">Pictures</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome! I am delighted to connect with you. My journey is a blend of diverse passions and expertise that span across gardening, motivation boosting, spiritual speaking, financial management, and investment advising. Allow me to share a bit more about each facet of what I offer.</p> 
+            <div class="watermark-container">
+                <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/Paduka1.jpg" alt="Watermark Image">
+            </div>
+            <p>Gardening Enthusiast
+                My love for gardening goes beyond the simple pleasure of growing plants. It's about creating vibrant, sustainable environments that bring joy and tranquility. I am well-versed in various gardening techniques, from organic farming to modern hydroponics, and I take immense pleasure in helping others cultivate their green spaces. Whether you're a beginner or a seasoned gardener, I can offer you tips, tricks, and personalized guidance to help your garden flourish.</p>
+            <p>Motivation Booster
+                We all face challenges and sometimes need a little push to stay on track. With a natural knack for understanding people's needs and aspirations, I specialize in boosting motivation. Through personalized strategies and heartfelt encouragement, I help individuals find their inner strength and stay committed to their goals. My approach is compassionate, practical, and tailored to meet you where you are on your journey.</p>
+            <p>Spiritual Speaker
+                In today's fast-paced world, finding spiritual balance is essential. As a spiritual speaker, I aim to inspire and uplift by sharing insights and wisdom that resonate with the soul. My talks are designed to connect deeply with my audience, offering perspectives that foster inner peace, personal growth, and a deeper understanding of oneself and the universe. Whether you're seeking guidance or simply a moment of reflection, my words are meant to touch and transform.</p>
+            <p>Financial Management and Investment Advisor
+                Navigating the complex world of finance can be daunting, but with the right guidance, it can also be incredibly rewarding. I bring a wealth of knowledge in financial management and investment advising, helping individuals and businesses make informed decisions that lead to financial stability and growth. From budgeting and saving to investing and wealth management, my goal is to empower you with the tools and knowledge to achieve your financial aspirations.</p> 
+            <section id="videos">
+                <h2>Videos</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AETFvQonfV8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+            <p>A Holistic Approach
+                What sets me apart is my holistic approach, integrating these diverse areas into a cohesive framework aimed at enhancing overall well-being. By balancing the practical aspects of financial health with the nurturing elements of gardening, the inspirational power of motivation, and the profound insights of spirituality, I offer a unique and comprehensive support system.
+                Thank you for taking the time to learn more about me. Whether you're looking to grow a garden, find motivation, seek spiritual insights, or manage your finances, I'm here to help. Let's embark on this journey together towards a more fulfilling and balanced life.</p>
+        </section>
+        <section id="topics">
+            <h2>Topics</h2>
+            <!-- <h3>Gardening</h3>
+            <ul>
+                <li>Tips on Soil selection</li>
+                <li>Watering</li>
+                <li>Plant selection</li>
+                <li>Growing tips</li>
+                <li>Flowering tips</li>
+            </ul> -->
+            <h3>Moral Boosting</h3>
+            <p>Advice based on situation</p>
+            <h3>Financial Management</h3>
+            <p>Tips as per interest and fund</p>
+            <h3>Investment Advice</h3>
+            <p>Tips for Investment</p>
+        </section>
+        <section id="blogs">
+            <h2>Blogs</h2>
+            <p>Will add later.</p>
+        </section>
+        <section id="videos">
+            <h2>Videos</h2>
+            <p>Will add later.</p>
+        </section>
+        <section id="pictures">
+            <h2>Pictures</h2>
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/nage4.webp" alt="Image 1">
+                </div>
+                <div class="slides">
+                    <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/nage2.jpg" alt="Image 2">
+                </div>
+                <div class="slides">
+                    <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/nag5.jpg" alt="Image 3">
+                </div>
+                <div class="slides">
+                    <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/nag3.jpeg" alt="Image 4">
+                </div>
+                <div class="slides">
+                    <img src="https://raw.githubusercontent.com/SamalNagen11/Lotus/main/nag5.jpg" alt="Image 5">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+        </section>
+        
+        <section id="contact">
+    <h2>Contact</h2>
+
+    <p>Email: <a href="Samal_nagen@rediffmail.com">Samal_nagen@rediffmail.com</a></p>
+
+</section>
+
+
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Paduka Ashram, Dandisahi. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
